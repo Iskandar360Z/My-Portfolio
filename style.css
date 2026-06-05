@@ -1038,10 +1038,17 @@ img[src="harits.jpg"]:hover {
 }
 
 /* --- Skills Tag Dark Mode Override --- */
+.skills-filter-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+}
+
 .dark-mode .skills-filter-container {
     background: rgba(56, 189, 248, 0.02) !important;
     border-color: #1f2937 !important;
 }
+
 .dark-mode .skill-tag {
     background: #1e293b !important;
     color: #cbd5e1 !important;
