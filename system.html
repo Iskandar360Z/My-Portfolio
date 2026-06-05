@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Integration & Insights</title>
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <script>
+    if (localStorage.getItem("portfolio-theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+    }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About</a> | 
+        <a href="portfolio.html">Portfolio</a> |
+        <a href="interactive.html">Interactive</a> |
+        <a href="system.html" class="active">System Log</a> |
+        <a href="about.html#contact-section">Contact</a>
+    </nav>
+    
+    <div class="dynamic-header">
+        <button id="theme-toggle" class="btn">Toggle Dark Mode</button>
+        <div class="info-display">
+            <h3 id="greeting">System Status</h3>
+            <p id="date-time-display"></p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section>
+            <h2>🖥️ System Integration & Architecture</h2>
+            <p>This panel documents how the distinct modules of this Personal Portfolio interact, track states, and form a complete dynamic web experience.</p>
+            
+            <div class="system-matrix-grid">
+                
+                <div class="matrix-card">
+                    <h3>🧠 1. Technical Learning & Mastery</h3>
+                    <p>Over this 7-week roadmap, the project transitioned from basic static structural markups to an event-driven system application. Key competencies developed include semantic HTML configuration, structural styling, state-controlled visual effects, and real-time JavaScript DOM mutation engines.</p>
+                </div>
+
+                <div class="matrix-card">
+                    <h3>⚡ 2. Logic & User Experience (UX) Integration</h3>
+                    <p>Dynamic programming significantly boosts portfolio engagement. The deployment of a persistent theme engine across all pages using local memory caches adapts seamlessly to user preferences. Simultaneously, replacing static items with a fully randomized, mathematical loop-driven <em>Code Cracker</em> application actively highlights technical capabilities directly to system evaluators.</p>
+                </div>
+
+                <div class="matrix-card">
+                    <h3>🚀 3. Future Architectural Roadmap</h3>
+                    <p>To scale this infrastructure further, future development iterations will introduce external database API integration for contact messaging history records, hardware-accelerated grid canvas rendering for visual rows, and client-side session arrays to store persistent game leaderboards.</p>
+                </div>
+
+            </div> 
+
+            <h3 style="margin-top: 40px; color: #0ea5e9;">📈 Core Architecture Utilization Metrics</h3>
+            <div class="visual-graph-container">
+                <div class="graph-axis-y">
+                    <span>100%</span>
+                    <span>50%</span>
+                    <span>0%</span>
+                </div>
+                
+                <div class="graph-bars-wrapper">
+                    <div class="graph-bar-col">
+                        <div class="graph-bar-fill" style="height: 90%;"></div>
+                        <span class="graph-label">HTML5 Semantic</span>
+                    </div>
+                    <div class="graph-bar-col">
+                        <div class="graph-bar-fill" style="height: 75%;"></div>
+                        <span class="graph-label">CSS Grid Matrix</span>
+                    </div>
+                    <div class="graph-bar-col">
+                        <div class="graph-bar-fill" style="height: 95%;"></div>
+                        <span class="graph-label">Vanilla JS Dom</span>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+        <section id="live-logs-section" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #334155;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h3 style="margin: 0; color: #0ea5e9;">📊 Live Application Event Logs</h3>
+                <button onclick="clearSystemLogs()" style="padding: 6px 14px; background: #ef4444; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem; font-weight: 600;">Clear Log History</button>
+            </div>
+            
+            <div id="log-output-list" style="display: flex; flex-direction: column; gap: 10px;">
+                <p style="color: #64748b; font-style: italic;">No system event logs recorded yet. Try submitting the contact form on the About page!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="margin-top: 80px; padding: 30px 0; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.85rem; color: #64748b;">
+        <div class="footer-content">
+            <p>© 2026 Harits Iskandar. Built for Academic Portfolio Evaluation.</p>
+            <p style="font-size: 0.75rem; margin-top: 5px; color: #94a3b8;">System Architecture: HTML5 / CSS Grid Matrix / Client-Side Vanilla JS</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderSystemLogs();
+    });
+
+    // Reaches into LocalStorage, maps the items, and inserts them directly into the page layout
+    function renderSystemLogs() {
+        const logContainer = document.getElementById("log-output-list");
+        
+        // Read the exact key array pushed by your about.html form processing function
+        const storedLogs = JSON.parse(localStorage.getItem("portfolio_system_logs")) || [];
+        
+        if (storedLogs.length > 0) {
+            logContainer.innerHTML = ""; // Wipe the fallback message
+            
+            // Loop backwards so that your most recent submissions appear at the very top
+            for (let i = storedLogs.length - 1; i >= 0; i--) {
+                const item = storedLogs[i];
+                
+                const logRow = document.createElement("div");
+                logRow.style.background = "rgba(255, 255, 255, 0.02)";
+                logRow.style.border = "1px solid #334155";
+                logRow.style.padding = "15px";
+                logRow.style.borderRadius = "6px";
+                logRow.style.fontSize = "0.85rem";
+                logRow.style.lineHeight = "1.5";
+                
+                logRow.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: 600;">
+                        <span style="color: #38bdf8;">⚡ ${item.event}</span>
+                        <span style="color: #64748b; font-size: 0.8rem;">⏰ ${item.time}</span>
+                    </div>
+                    <div style="color: #cbd5e1;">${item.details}</div>
+                `;
+                
+                logContainer.appendChild(logRow);
+            }
+        }
+    }
+
+    // Allows users to explicitly clear out memory records instantly
+    function clearSystemLogs() {
+        if (confirm("Are you sure you want to clear your local system log database history?")) {
+            localStorage.removeItem("portfolio_system_logs");
+            document.getElementById("log-output-list").innerHTML = `
+                <p style="color: #64748b; font-style: italic;">No system event logs recorded yet. Try submitting the contact form on the About page!</p>
+            `;
+        }
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

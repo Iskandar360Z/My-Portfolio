@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive System Playground</title>
+    <link rel="stylesheet" href="style.css?v=2.0">
+    
+    <script>
+    if (localStorage.getItem("portfolio-theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+    }
+    </script>
+</head>
+<body>
+
+    <nav>
+		<a href="index.html">Home</a> | 
+		<a href="about.html">About</a> | 
+		<a href="portfolio.html">Portfolio</a> |
+		<a href="interactive.html" class="active">Interactive</a> |
+		<a href="system.html">System Log</a> |
+		<a href="about.html#contact-section">Contact</a>
+	</nav>
+    
+    <div class="dynamic-header">
+        <button id="theme-toggle" class="btn">Toggle Dark Mode</button>
+        <div class="info-display">
+            <h3 id="greeting">Welcome to my portfolio!</h3>
+            <p id="date-time-display"></p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="game-section">
+            <h2>🔐 Code Cracker: Security Terminal Mini-Game</h2>
+            <p>The system has generated a randomized secret <strong>3-digit code</strong> using unique numbers from <strong>0 to 9</strong>. You have <strong>5 attempts</strong> to bypass the terminal firewall!</p>
+            
+            <div style="background-color: rgba(0,118,187,0.05); padding: 12px; border-radius: 6px; margin-bottom: 20px; font-size: 0.9rem; border-left: 4px solid #0076bb;">
+                <strong>System Feedback Guide:</strong><br>
+                🟩 <strong>Green:</strong> Digit is perfectly correct and in the right slot.<br>
+                🟨 <strong>Yellow:</strong> Digit is in the secret code, but sitting in the wrong slot.<br>
+                ⬛ <strong>Dark Gray:</strong> Digit does not exist in the code at all.
+            </div>
+
+            <div id="game-inputs-panel" style="display: flex; gap: 15px; justify-content: center; align-items: center; margin-bottom: 25px;">
+                <input type="text" id="digit-1" class="code-input" maxlength="1" pattern="[0-9]" placeholder="0">
+                <input type="text" id="digit-2" class="code-input" maxlength="1" pattern="[0-9]" placeholder="0">
+                <input type="text" id="digit-3" class="code-input" maxlength="1" pattern="[0-9]" placeholder="0">
+                <button id="submit-guess-btn" class="btn">Bypass Terminal</button>
+            </div>
+
+            <div id="attempts-log-holder" style="display: flex; flex-direction: column; gap: 10px; margin: 20px auto; max-width: 400px;">
+                </div>
+
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #cbd5e1; padding-top: 15px; margin-top: 20px; font-weight: bold;">
+                <span id="attempts-left-counter">Attempts Remaining: 5 / 5</span>
+                <span id="game-status-message" style="color: #64748b;">Terminal Standby</span>
+            </div>
+
+            <button id="restart-game-btn" class="btn" style="display: none; width: 100%; margin-top: 20px;">Initialize System Reboot (Restart)</button>
+        </section>
+    </main>
+	<footer style="margin-top: 80px; padding: 30px 0; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.85rem; color: #64748b;">
+    <div class="footer-content">
+        <p>© 2026 Harits Iskandar. Built for Academic Portfolio Evaluation.</p>
+        <p style="font-size: 0.75rem; margin-top: 5px; color: #94a3b8;">System Architecture: HTML5 / CSS Grid Matrix / Client-Side Vanilla JS</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

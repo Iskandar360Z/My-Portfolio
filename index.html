@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css?v=2.0">
+    
+    <script>
+    if (localStorage.getItem("portfolio-theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+    }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="active">Home</a> | 
+        <a href="about.html">About</a> | 
+        <a href="portfolio.html">Portfolio</a> |
+        <a href="interactive.html">Interactive</a> |
+        <a href="system.html">System Log</a> |
+        <a href="about.html#contact-section">Contact</a>
+    </nav>
+    
+    <div class="dynamic-header">
+        <button id="theme-toggle" class="btn">Toggle Dark Mode</button>
+        
+        <div class="info-display">
+            <h3 id="greeting">Welcome to my portfolio!</h3>
+            <p id="date-time-display"></p>
+        </div>
+    </div>
+
+    <main class="container">
+        
+        <div class="hero-split-grid">
+            
+            <div class="left-column">
+                <div class="profile-hero-card">
+                    <span class="system-badge">System Operator</span>
+                    <img src="harits.jpg" alt="A professional profile photograph of Harits" width="200">
+                    <h1>HARITS ISKANDAR BIN ASHARI</h1>
+                    <h2>Computer Science Multimedia (CS253)</h2>
+                    <div class="cta-buttons" style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                        <div style="display: flex; gap: 10px; width: 100%;">
+                            <a href="portfolio.html" class="btn" style="flex: 1; text-align: center;">View Portfolio</a>
+                            <a href="interactive.html" class="btn-reset game-launch-btn" style="flex: 1; text-align: center;">Play Code Cracker</a>
+                        </div>
+                        <button onclick="window.print()" class="btn print-btn" style="width: 100%; cursor: pointer;">
+                            🖨️ Print Profile CV
+                        </button>
+                    </div>
+                </div>
+
+                <div class="analytics-card" style="margin-top: 25px;">
+                    <h3>🖥️ Core Architecture Status</h3>
+                    <div class="metrics-list">
+                        <div class="metric-item">
+                            <span class="metric-label">Project Canvas State</span>
+                            <span class="metric-value status-online">Production Ready</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">UI Layout Engine</span>
+                            <span class="metric-value">CSS Grid Framework</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Memory Environment</span>
+                            <span class="metric-value">LocalStorage Engaged</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analytics-card" style="margin-top: 25px;">
+                    <h3>📈 System Performance Analytics</h3>
+                    <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 15px;">Development velocity metric tracking across active sprint phases:</p>
+                    
+                    <div class="visual-graph-container">
+                        <div class="graph-axis-y">
+                            <span>100%</span>
+                            <span>50%</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="graph-bars-wrapper">
+                            <div class="graph-bar-col" title="Sprint 1: Core Semantic HTML5 & Typography Layouts">
+                                <div class="graph-bar-fill" style="height: 40%;"></div>
+                                <span class="graph-label">Sprint 1</span>
+                            </div>
+                            <div class="graph-bar-col" title="Sprint 2: CSS Grid Matrix Layout & Interface Components">
+                                <div class="graph-bar-fill" style="height: 70%;"></div>
+                                <span class="graph-label">Sprint 2</span>
+                            </div>
+                            <div class="graph-bar-col" title="Sprint 3: JavaScript Logic, DOM Controls & LocalStorage Engine">
+                                <div class="graph-bar-fill" style="height: 85%;"></div>
+                                <span class="graph-label">Sprint 3</span>
+                            </div>
+                            <div class="graph-bar-col" title="Deploy: Responsive UI Optimization & Production Certification">
+                                <div class="graph-bar-fill" style="height: 100%;"></div>
+                                <span class="graph-label">Deploy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="right-column">
+                <section id="about">
+                    <h3>Personal Introduction</h3>
+                    <p style="line-height: 1.6; font-size: 1.05rem;">
+                        Hi, I'm Harits Iskandar. I am a passionate Computer Science student exploring web development, client-side systems thinking, and interactive UI/UX design. I love building clean layouts, solving complex logical algorithms, and creating seamless, meaningful digital experiences from the ground up. Welcome to my portfolio!
+                    </p>
+                </section>
+
+                <section id="skills-panel">
+                    <h3>Skills & Interests</h3>
+                    <ul class="styled-list">
+                        <li>Web Development (HTML5, CSS3, JavaScript)</li>
+                        <li>Object-Oriented Programming (Java, C++)</li>
+                        <li>Programming Logic & Software Engineering</li>
+                        <li>System Integration</li>
+                    </ul>
+                </section>
+
+                <section id="tech-stack">
+                    <h3>🛠️ Core Technical Environment</h3>
+                    <p>Current architecture stacks and software tools actively utilized across development pipelines:</p>
+                    <div class="stack-grid">
+                        <div class="stack-box">
+                            <h5>Front-End Engine</h5>
+                            <p>HTML5, CSS3 Grid Layouts, Responsive UI Design, Vanilla JavaScript (ES6+)</p>
+                        </div>
+                        <div class="stack-box">
+                            <h5>Software & Logic</h5>
+                            <p>Java OOP (Object-Oriented Programming), C++, Data Structures, Algorithmic Logic</p>
+                        </div>
+                        <div class="stack-box">
+                            <h5>Graphics & Systems</h5>
+                            <p>Blender 3D Modeling, OpenGL Rendering Engines, Android Studio, Git Version Control</p>
+                        </div>
+                    </div>
+                </section>
+            </div> 
+        </div> 
+
+        <section id="contact" style="margin-top: 40px;">
+            <h3>Connect With Me</h3>
+            <p>Check out my work or get in touch through these links:</p>
+            <ul class="styled-list link-list" style="display: flex; gap: 25px; list-style: none; padding-left: 0; margin-top: 15px;">
+                <li><a href="https://github.com" target="_blank">🔗 My GitHub Profile</a></li>
+                <li><a href="https://linkedin.com" target="_blank">💼 My LinkedIn Profile</a></li>
+                <li><a href="mailto:your-email@example.com">✉️ Send me an Email</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer style="margin-top: 80px; padding: 30px 0; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.85rem; color: #64748b;">
+        <div class="footer-content">
+            <p>© 2026 Harits Iskandar. Built for Academic Portfolio Evaluation.</p>
+            <p style="font-size: 0.75rem; margin-top: 5px; color: #94a3b8;">System Architecture: HTML5 / CSS Grid Matrix / Client-Side Vanilla JS</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

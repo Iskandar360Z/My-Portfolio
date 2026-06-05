@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects Showcase</title>
+    <link rel="stylesheet" href="style.css?v=2.0">
+	
+	<script>
+    if (localStorage.getItem("portfolio-theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+    }
+	</script>
+</head>
+<body>
+
+    <nav>
+		<a href="index.html">Home</a> | 
+		<a href="about.html">About</a> |
+		<a href="portfolio.html" class="active">Portfolio</a> |
+		<a href="interactive.html">Interactive</a> |
+		<a href="system.html">System Log</a> |
+		<a href="about.html#contact-section">Contact</a>
+	</nav>
+	
+	<div class="dynamic-header">
+		<button id="theme-toggle" class="btn">Toggle Dark Mode</button>
+		<div class="info-display">
+			<h3 id="greeting">Welcome to my portfolio!</h3>
+			<p id="date-time-display"></p>
+		</div>
+	</div>
+
+    <main class="container">
+        <section>
+            <h2>Project Showcase & Achievements</h2>
+            <p>Below are some of the technical systems and design projects I've built:</p>
+            
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="card-badge">Computer Graphics</div>
+                    <h3>3D KLCC Tower Render</h3>
+                    <p>Designed a structurally detailed 3D architectural model of the KLCC Twin Towers using Blender and rendered using standard OpenGL matrices.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-badge">Software Engineering</div>
+                    <h3>Inventory Management System</h3>
+                    <p>Developed a functional inventory and stock-tracking system built on pure Java logic utilizing dynamic arrays and a structural GUI framework.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-badge">Systems & OOP</div>
+                    <h3>Baju Raya Warehouse Supply System</h3>
+                    <p>Developed a centralized warehouse inventory system in Java using Object-Oriented Programming (OOP) principles to track stock distributions and supply levels across regional branches.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-badge">Structured Programming</div>
+                    <h3>Car Rental Management System</h3>
+                    <p>Built a terminal-based application in C++ utilizing procedural logic algorithms to manage vehicle availability, customer logs, and rental calculations.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-badge">Multimedia & Simulation</div>
+                    <h3>Interactive Fire Drill Simulation</h3>
+                    <p>Created an educational, interactive 3D simulation designed to teach children emergency fire safety protocols in Blender, using Python to script behavioral animations.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-badge">3D Modeling</div>
+                    <h3>3D Mechanical Excavator Model</h3>
+                    <p>Designed a detailed 3D asset of an excavator, focusing on precise geometric modeling, realistic material textures, and structural design constraints.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-badge">Database Systems</div>
+                    <h3>Retail Sales Database System</h3>
+                    <p>Developed a relational database management system using Microsoft Access to track and manage retail transactions, inventory levels, and customer data with optimized queries.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-badge">Networking</div>
+                    <h3>Network Topology Simulation</h3>
+                    <p>Designed and simulated a scalable network infrastructure using Cisco Packet Tracer, implementing custom subnetting, VLAN configurations, and routing protocols.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+	<footer style="margin-top: 80px; padding: 30px 0; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.85rem; color: #64748b;">
+    <div class="footer-content">
+        <p>© 2026 Harits Iskandar. Built for Academic Portfolio Evaluation.</p>
+        <p style="font-size: 0.75rem; margin-top: 5px; color: #94a3b8;">System Architecture: HTML5 / CSS Grid Matrix / Client-Side Vanilla JS</p>
+    </div>
+</footer>
+	<script src="script.js"></script>
+</body>
+</html>
