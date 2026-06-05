@@ -110,6 +110,8 @@ h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+	flex-wrap: wrap;
+	gap: 15px;
     padding: 20px 30px;
     margin: 30px auto 10px auto;
     max-width: 840px;
@@ -241,6 +243,8 @@ tr:last-child td {
     border: 1px solid #e2e8f0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .project-card:hover {
@@ -455,6 +459,58 @@ img[src="harits.jpg"]:hover {
     color: #ffffff !important;
     border-radius: 10px !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 6. Clean high-contrast text fix for the Reboot/Restart button */
+#restart-game-btn {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    background-color: #10b981 !important;
+}
+
+#restart-game-btn:hover {
+    background-color: #059669 !important;
+}
+
+/* ==========================================================================
+    🔥 NEW CODE: MOBILE RESPONSIVE OVERRIDES FOR TERMINAL FIREWALL
+   ========================================================================== */
+@media (max-width: 600px) {
+    /* Allows the input boxes and the button to wrap safely on mobile */
+    #game-inputs-panel {
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+        margin: 20px 0 !important;
+    }
+
+    /* Scales down your 65px inputs to 48px so they fit on a mobile screen */
+    #game-inputs-panel .code-input {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 1.4rem !important;
+        border-radius: 8px !important;
+    }
+
+    /* Moves the Bypass Terminal button smoothly below the boxes for easy tapping */
+    #submit-guess-btn {
+        height: 48px !important;
+        padding: 0 16px !important;
+        font-size: 0.85rem !important;
+        border-radius: 8px !important;
+        width: 100% !important; 
+    }
+
+    /* Scales down your history attempt blocks so they don't leak out of the box */
+    #attempts-log-holder .attempt-row {
+        gap: 8px !important;
+    }
+
+    #attempts-log-holder .tile {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.2rem !important;
+        border-radius: 6px !important;
+    }
 }
 
 /* ==========================================================================
@@ -880,6 +936,8 @@ img[src="harits.jpg"]:hover {
     padding: 25px !important;
     border-radius: 12px !important;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .matrix-card h3 {
