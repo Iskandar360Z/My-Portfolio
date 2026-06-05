@@ -1041,7 +1041,16 @@ img[src="harits.jpg"]:hover {
 .skills-filter-container {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 15px !important;
+    gap: 12px !important;
+    justify-content: flex-start !important;
+}
+
+.skills-filter-container label, 
+.skills-filter-container span,
+.skills-filter-container input {
+    max-width: 100% !important;
+    white-space: normal !important; 
+    font-size: 0.9rem !important;    
 }
 
 .dark-mode .skills-filter-container {
