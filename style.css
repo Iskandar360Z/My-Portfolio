@@ -1295,3 +1295,31 @@ img[src="harits.jpg"]:hover {
     background: #334155 !important;
     color: #f8fafc !important;
 }
+
+/* --- Technical Skills Filter Mobile Alignment Fix --- */
+.skills-filter-container {
+    display: block !important; /* Converts container to block to let content manage naturally */
+}
+
+/* 🛠️ TARGETS THE INLINE FLEX GRID: Forces checkboxes to drop down when out of room */
+.skills-filter-container .filter-controls {
+    display: flex !important;
+    flex-wrap: wrap !important;  
+    gap: 12px 20px !important;    /* 12px vertical spacing between wrapped rows, 20px horizontal */
+}
+
+/* Prevents the individual label text strings from splitting up awkwardly */
+.skills-filter-container .filter-controls label {
+    white-space: nowrap !important;
+}
+
+/* Dark Mode Overrides stay right underneath */
+.dark-mode .skills-filter-container {
+    background: rgba(56, 189, 248, 0.02) !important;
+    border-color: #1f2937 !important;
+}
+
+.dark-mode .skill-tag {
+    background: #1e293b !important;
+    color: #cbd5e1 !important;
+}
